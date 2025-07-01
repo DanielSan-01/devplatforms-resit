@@ -1,4 +1,3 @@
-
 hello this markup doc will tell you about chackra UI and the key features and capabilities. it will also be a tutorial on how to get started. 
 
 ### What is Chakra UI?
@@ -53,6 +52,9 @@ this tutorial will show you how fast and simple you can use chackra UI, this wil
 
 here's how your project should be organized when we have followed the steps:
 
+<details>
+<summary>📁 <strong>Project Structure</strong> (click to expand)</summary>
+
 ```
 your-project/
 ├── index.html
@@ -70,6 +72,8 @@ your-project/
             ├── toaster.jsx
             └── tooltip.jsx
 ```
+
+</details>
 
 assuming you just have a code editor we will start with node to install everything 
 ```bash
@@ -94,6 +98,9 @@ npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
 then you create a basic file structure src folder
 inn root create index.html and add this very basic file structure and add this tp the html file
 
+<details>
+<summary>📄 <strong>index.html</strong> (click to expand)</summary>
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -111,6 +118,8 @@ inn root create index.html and add this very basic file structure and add this t
   </body>
 </html>
 ```
+
+</details>
 
 src folder create index.jsx and add this to the jsx file 
 
@@ -133,7 +142,8 @@ instead of going codeblock for codeblock ive generated a very simple demonstrati
 
 create inside src/ App.jsx and index.jsx
 
-    App.jsx
+<details>
+<summary>⚛️ <strong>App.jsx</strong> (click to expand)</summary>
 
 ```jsx
 import React, { useState } from 'react';
@@ -456,7 +466,12 @@ function App() {
 export default App;
 ```
 
+</details>
+
 create index.jsx and add this
+
+<details>
+<summary>📄 <strong>index.jsx</strong> (click to expand)</summary>
 
 ```jsx
 import React from 'react';
@@ -476,6 +491,8 @@ root.render(
 );
 ```
 
+</details>
+
 then we need a new folder src/components/ui
 here we need 4 files
 • color-mode-jsx
@@ -483,8 +500,9 @@ here we need 4 files
 • toaster.jsx
 • tooltip.jsx
 
+<details>
+<summary>🎨 <strong>color-mode.jsx</strong> (click to expand)</summary>
 
-      color-mode-jsx
 ```jsx
 'use client'
 
@@ -578,7 +596,11 @@ export const DarkMode = React.forwardRef(function DarkMode(props, ref) {
 })
 ```
 
-    provider.jsx
+</details>
+
+<details>
+<summary>🔧 <strong>provider.jsx</strong> (click to expand)</summary>
+
 ```jsx
 'use client'
 
@@ -593,7 +615,12 @@ export function Provider(props) {
   )
 }
 ```
-      toaster.jsx
+
+</details>
+
+<details>
+<summary>🍞 <strong>toaster.jsx</strong> (click to expand)</summary>
+
 ```jsx
 'use client'
 
@@ -639,7 +666,12 @@ export const Toaster = () => {
   )
 }
 ```
-    tooltip.jsx
+
+</details>
+
+<details>
+<summary>💡 <strong>tooltip.jsx</strong> (click to expand)</summary>
+
 ```jsx
 import { Tooltip as ChakraTooltip, Portal } from '@chakra-ui/react'
 import * as React from 'react'
@@ -678,13 +710,7 @@ export const Tooltip = React.forwardRef(function Tooltip(props, ref) {
 })
 ```
 
-
-
-
-
-
-
-
+</details>
 
 with all the files ready to go we need a build tool like parcell or vite
 i will use vite in this tutorial
@@ -693,6 +719,10 @@ to install vite
 ```bash
 npm install vite @vitejs/plugin-react --save-dev
 ```
+
+<details>
+<summary>📦 <strong>package.json scripts</strong> (click to expand)</summary>
+
 add scripts to package.json file
 ```json
 {
@@ -703,6 +733,9 @@ add scripts to package.json file
   }
 }
 ```
+
+</details>
+
 then run dev server
 ```bash
 npm run dev
