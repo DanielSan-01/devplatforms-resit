@@ -690,10 +690,9 @@ export const Tooltip = React.forwardRef(function Tooltip(props, ref) {
 
 
 
-with all the files ready to go 
+with all the files ready to go we need a build tool like parcell or vite
+i will use vite in this tutorial
 
-
-with this you will need a build tool like parcell or vite
 to install vite
 ```bash
 npm install vite @vitejs/plugin-react --save-dev
