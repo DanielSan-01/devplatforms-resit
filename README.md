@@ -1,44 +1,51 @@
 
-hello this markup doc will tell you about chackra UI and the key features. it will also be a tutorial. 
+hello this markup doc will tell you about chackra UI and the key features and capabilities. it will also be a tutorial on how to get started. 
 
-what is chakra UI?
+##what is chakra UI?
 
 chakra UI is a modern, open-source component library built for React applications. It provides developers with a set of accessible and themeable components out of the box, enabling faster and more consistent UI development.
 
 chakra emphasizes developer experience, accessibility, and customizability. All components are built with WAI-ARIA standards, meaning accessibility is baked in by default .
 
-key feauters
+## KEY FEAUTERS
 
-• pre built components - includes everything from buttons, modals and forms 
-• theming systems - powerfull theming engine to customize colours, fonts, breakpoints and more to match your brand/style system
-• Style props - you can style these componens direcly. with this inline styling removes need for CSS file
-• Built in responsivness - also easy to change different styles for different breakpoints
-• Accessibility - best practices and proper aria attributes
+### **pre-built components**
+includes everything from buttons, modals and forms - providing you with a comprehensive toolkit right out of the box.
 
-how does this help you as a developer? 
+### **theming system**
+powerful theming engine to customize colours, fonts, breakpoints and more to match your brand/style system.
 
-accessibility by default
-  many component libraries ignore accessibility, leaving it to the developer. Chakra UI takes care of accessibility features like focus trapping, keyboard support, and ARIA roles. this saves time and improves usability.
+### **style props**
+you can style these components directly. With this inline styling removes need for CSS files.
 
-speeds up development
-  developers dont have to reinvent UI elements from scratch. With components like <Button>, <Input>, <Modal>, and <Flex>, you can build entire interfaces with minimal setup.
+### **built-in responsiveness**
+also easy to change different styles for different breakpoints across all devices.
 
-      example
+### **accessibility**
+best practices and proper ARIA attributes built into every component by default.
+
+## how does this help you as a ceveloper?
+
+### accessibility by default
+Many component libraries ignore accessibility, leaving it to the developer. Chakra UI takes care of accessibility features like focus trapping, keyboard support, and ARIA roles. This saves time and improves usability.
+
+### speeds up development
+Developers don't have to reinvent UI elements from scratch. With components like `<Button>`, `<Input>`, `<Modal>`, and `<Flex>`, you can build entire interfaces with minimal setup.
+
+**Example:**
 ```jsx
 <Button colorScheme="blue">Click Me</Button>
 ```
 
-reduce boilerplate code
-  instead of writing CSS classes or opening a separate CSS file, you apply styles directly via props. This keeps the code cleaner and easier to manage.
+### eeduce boilerplate code
+Instead of writing CSS classes or opening a separate CSS file, you apply styles directly via props. This keeps the code cleaner and easier to manage.
 
-encourages Consistency
-  using a shared theme and reusable components leads to a consistent UI without much effort — important when working in teams or across multiple pages.
+### encourages consistency
+Using a shared theme and reusable components leads to a consistent UI without much effort — important when working in teams or across multiple pages.
 
 chakra UI is an excellent choice for developers who want to build clean, accessible, and responsive user interfaces fast — without compromising on customizability. 
 
-
-
-
+---
 
 this tutorial will show you how fast and simple you can use chackra UI, this will just be a fresh repo with react. 
 
