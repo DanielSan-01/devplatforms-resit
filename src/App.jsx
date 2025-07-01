@@ -358,7 +358,7 @@ function HomePage() {
 // Main App Component with Router
 function App() {
   return (
-    <Router>
+    <Router basename="/devplatforms-resit">
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />

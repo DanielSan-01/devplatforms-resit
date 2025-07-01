@@ -143,9 +143,9 @@ root.render(
 </details>
 
 
-instead of going codeblock for codeblock ive generated a very simple demonstration of all the UI components inside each of the elements there is a explenation that shows or explains the element or why things like these are easy to build with chackra, I will be importing and showing a lot to give you a good scope of what cackra can do there will also be small comments in the code pretaing to the function they serve
+instead of going codeblock for codeblock ive generated a very simple demonstration of all the UI components inside each of the elements there is a explenation that shows or explains the element or why things like these are easy to build with chackra, I will be importing and showing a lot to give you a good scope of what cackra can do there will also be small comments in the code pretaing to the function they serve. 
 
-create inside src/ App.jsx and index.jsx
+create inside src/ App.jsx 
 
 <details>
 <summary><strong>App.jsx</strong> (click to expand)</summary>
