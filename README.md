@@ -1,7 +1,7 @@
 
 hello this markup doc will tell you about chackra UI and the key features and capabilities. it will also be a tutorial on how to get started. 
 
-##what is chakra UI?
+###what is chakra UI?
 
 chakra UI is a modern, open-source component library built for React applications. It provides developers with a set of accessible and themeable components out of the box, enabling faster and more consistent UI development.
 
@@ -37,7 +37,7 @@ Developers don't have to reinvent UI elements from scratch. With components like
 <Button colorScheme="blue">Click Me</Button>
 ```
 
-### eeduce boilerplate code
+### reduce boilerplate code
 Instead of writing CSS classes or opening a separate CSS file, you apply styles directly via props. This keeps the code cleaner and easier to manage.
 
 ### encourages consistency
@@ -78,17 +78,17 @@ npm install
 
 when we have npm installed we can start building!
 
-##first initialize a new project
+###first initialize a new project
 ```bash
 npm init -y
 ```
 
-##second install react core dependencies
+###second install react core dependencies
 ```bash
 npm install react react-dom
 ```
 
-##third install Chakra UI and its required dependencies
+###third install Chakra UI and its required dependencies
 ```bash
 npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
