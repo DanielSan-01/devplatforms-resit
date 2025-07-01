@@ -53,7 +53,7 @@ this tutorial will show you how fast and simple you can use chackra UI, this wil
 here's how your project should be organized when we have followed the steps:
 
 <details>
-<summary>📁 <strong>Project Structure</strong> (click to expand)</summary>
+<summary><strong>Project Structure</strong> (click to expand)</summary>
 
 ```
 your-project/
@@ -99,7 +99,7 @@ then you create a basic file structure src folder
 inn root create index.html and add this very basic file structure and add this tp the html file
 
 <details>
-<summary>📄 <strong>index.html</strong> (click to expand)</summary>
+<summary><strong>index.html</strong> (click to expand)</summary>
 
 ```html
 <!DOCTYPE html>
@@ -123,6 +123,9 @@ inn root create index.html and add this very basic file structure and add this t
 
 src folder create index.jsx and add this to the jsx file 
 
+<details>
+<summary><strong>index.jsx</strong> (click to expand)</summary>
+
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -137,13 +140,15 @@ root.render(
 );
 ```
 
+</details>
+
 
 instead of going codeblock for codeblock ive generated a very simple demonstration of all the UI components inside each of the elements there is a explenation that shows or explains the element or why things like these are easy to build with chackra, I will be importing and showing a lot to give you a good scope of what cackra can do there will also be small comments in the code pretaing to the function they serve
 
 create inside src/ App.jsx and index.jsx
 
 <details>
-<summary>⚛️ <strong>App.jsx</strong> (click to expand)</summary>
+<summary><strong>App.jsx</strong> (click to expand)</summary>
 
 ```jsx
 import React, { useState } from 'react';
@@ -471,7 +476,7 @@ export default App;
 create index.jsx and add this
 
 <details>
-<summary>📄 <strong>index.jsx</strong> (click to expand)</summary>
+<summary><strong>index.jsx</strong> (click to expand)</summary>
 
 ```jsx
 import React from 'react';
@@ -501,7 +506,7 @@ here we need 4 files
 • tooltip.jsx
 
 <details>
-<summary>🎨 <strong>color-mode.jsx</strong> (click to expand)</summary>
+<summary><strong>color-mode.jsx</strong> (click to expand)</summary>
 
 ```jsx
 'use client'
@@ -599,7 +604,7 @@ export const DarkMode = React.forwardRef(function DarkMode(props, ref) {
 </details>
 
 <details>
-<summary>🔧 <strong>provider.jsx</strong> (click to expand)</summary>
+<summary><strong>provider.jsx</strong> (click to expand)</summary>
 
 ```jsx
 'use client'
@@ -619,7 +624,7 @@ export function Provider(props) {
 </details>
 
 <details>
-<summary>🍞 <strong>toaster.jsx</strong> (click to expand)</summary>
+<summary><strong>toaster.jsx</strong> (click to expand)</summary>
 
 ```jsx
 'use client'
@@ -670,7 +675,7 @@ export const Toaster = () => {
 </details>
 
 <details>
-<summary>💡 <strong>tooltip.jsx</strong> (click to expand)</summary>
+<summary><strong>tooltip.jsx</strong> (click to expand)</summary>
 
 ```jsx
 import { Tooltip as ChakraTooltip, Portal } from '@chakra-ui/react'
@@ -721,7 +726,7 @@ npm install vite @vitejs/plugin-react --save-dev
 ```
 
 <details>
-<summary>📦 <strong>package.json scripts</strong> (click to expand)</summary>
+<summary><strong>package.json scripts</strong> (click to expand)</summary>
 
 add scripts to package.json file
 ```json
