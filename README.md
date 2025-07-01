@@ -1,4 +1,4 @@
-hello this markup doc will tell you about chackra UI and the key features and capabilities. it will also be a tutorial on how to get started. 
+this markup doc aims to entertain and inform you about chackra UI and its key features and capabilities. there will also be a tutorial on how to get started with react and chackra.
 
 ### What is Chakra UI?
 
