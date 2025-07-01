@@ -1,4 +1,4 @@
-this markup doc aims to entertain and inform you about chackra UI and its key features and capabilities. there will also be a tutorial on how to get started with react and chackra. in the git pages link you can navigate to the how to section to see the code and get the tutorial https://danielsan-01.github.io/devplatforms-resit/howto
+this markup doc aims to entertain and inform you about chackra UI and its key features and capabilities. there will also be a tutorial on how to get started with react and chackra. in the git pages link you can navigate to the how to section to see the code and get the tutorial 
 
 ### What is Chakra UI?
 
