@@ -1,14 +1,5 @@
-first 
-install npm
-second istall react
-```bash
-npm install react react-dom
-```
 
-```bash
-npx create-react-app modern-react-app-using-chackraui   
-```
-hello  this markup doc will tell you about chackra UI and the key features. it will also be a tutorial. 
+hello this markup doc will tell you about chackra UI and the key features. it will also be a tutorial. 
 
 what is chakra UI?
 
