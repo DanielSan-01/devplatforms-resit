@@ -82,19 +82,17 @@ when we have npm installed we can start building!
 ```bash
 npm init -y
 ```
-
-###second install react core dependencies
+### second install react core dependencies
 ```bash
 npm install react react-dom
 ```
-
-###third install Chakra UI and its required dependencies
+### third install chakra ui and ist required dependencies
 ```bash
 npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
-  then you create a basic file structure src folder
- inn root create index.html and add this very basic file structure and add this tp the html file
+then you create a basic file structure src folder
+inn root create index.html and add this very basic file structure and add this tp the html file
 
 ```html
 <!DOCTYPE html>
