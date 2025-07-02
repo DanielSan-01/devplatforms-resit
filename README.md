@@ -1,34 +1,34 @@
-this markup doc aims to entertain and inform you about chackra UI and its key features and capabilities. there will also be a tutorial on how to get started with react and chackra. in the git pages link you can navigate to the how to section to see the code and get the tutorial 
+This markup doc aims to entertain and inform you about Chakra UI and its key features and capabilities. There will also be a tutorial on how to get started with React and Chakra. In the git pages link you can navigate to the how to section to see the code and get the tutorial 
 
 ### What is Chakra UI?
 
-chakra UI is a modern, open-source component library built for React applications. It provides developers with a set of accessible and themeable components out of the box, enabling faster and more consistent UI development.
+Chakra UI is a modern, open-source component library built for React applications. It provides developers with a set of accessible and themeable components out of the box, enabling faster and more consistent UI development.
 
-chakra emphasizes developer experience, accessibility, and customizability. All components are built with WAI-ARIA standards, meaning accessibility is baked in by default .
+Chakra emphasizes developer experience, accessibility, and customizability. All components are built with WAI-ARIA standards, meaning accessibility is baked in by default.
 
-## KEY FEAUTERS
+## KEY FEATURES
 
-### **pre-built components**
-includes everything from buttons, modals and forms - providing you with a comprehensive toolkit right out of the box.
+### **Pre-built components**
+Includes everything from buttons, modals and forms - providing you with a comprehensive toolkit right out of the box.
 
-### **theming system**
-powerful theming engine to customize colours, fonts, breakpoints and more to match your brand/style system.
+### **Theming system**
+Powerful theming engine to customize colours, fonts, breakpoints and more to match your brand/style system.
 
-### **style props**
-you can style these components directly. With this inline styling removes need for CSS files.
+### **Style props**
+You can style these components directly. With this inline styling removes need for CSS files.
 
-### **built-in responsiveness**
-also easy to change different styles for different breakpoints across all devices.
+### **Built-in responsiveness**
+Also easy to change different styles for different breakpoints across all devices.
 
-### **accessibility**
-best practices and proper ARIA attributes built into every component by default.
+### **Accessibility**
+Best practices and proper ARIA attributes built into every component by default.
 
-## how does this help you as a ceveloper?
+## How does this help you as a developer?
 
-### accessibility by default
+### Accessibility by default
 Many component libraries ignore accessibility, leaving it to the developer. Chakra UI takes care of accessibility features like focus trapping, keyboard support, and ARIA roles. This saves time and improves usability.
 
-### speeds up development
+### Speeds up development
 Developers don't have to reinvent UI elements from scratch. With components like `<Button>`, `<Input>`, `<Modal>`, and `<Flex>`, you can build entire interfaces with minimal setup.
 
 **Example:**
@@ -36,21 +36,54 @@ Developers don't have to reinvent UI elements from scratch. With components like
 <Button colorScheme="blue">Click Me</Button>
 ```
 
-### reduce boilerplate code
+### Reduce boilerplate code
 Instead of writing CSS classes or opening a separate CSS file, you apply styles directly via props. This keeps the code cleaner and easier to manage.
 
-### encourages consistency
+### Encourages consistency
 Using a shared theme and reusable components leads to a consistent UI without much effort — important when working in teams or across multiple pages.
 
-chakra UI is an excellent choice for developers who want to build clean, accessible, and responsive user interfaces fast — without compromising on customizability. 
+Chakra UI is an excellent choice for developers who want to build clean, accessible, and responsive user interfaces fast — without compromising on customizability. 
+
+## History
+
+Chakra UI was created in 2019 by Segun Adebayo, a Nigerian software engineer, with the goal of building a simple and accessible component library for React. The project gained rapid adoption due to its focus on developer experience and accessibility-first approach. Since its initial release, Chakra UI has evolved through major versions, with version 2.0 introducing significant improvements to theming, performance, and TypeScript support. The library has grown from a personal project to a widely-adopted solution used by thousands of developers worldwide.
+
+## Limitations
+
+While Chakra UI excels in many areas, it does have some limitations. The library can add significant bundle size to smaller projects, and some developers find the utility-prop approach verbose compared to traditional CSS. Customization beyond the provided theme system can sometimes require more effort, and the opinionated design system may not suit all brand requirements. Additionally, being React-specific limits its use in other frameworks, and some advanced UI patterns may require custom implementations or third-party additions.
+
+## Ecosystem integration
+
+Chakra UI integrates seamlessly with modern full-stack development workflows. It works excellently with cloud platforms like Vercel, Netlify, and AWS Amplify for deployment, and pairs well with backend-as-a-service solutions like Supabase, Firebase, and PlanetScale. The library's TypeScript support makes it ideal for teams using modern development tools, and its consistent API helps streamline collaboration between designers and developers. When combined with state management solutions like Zustand or data-fetching libraries like SWR, Chakra UI becomes part of a comprehensive development platform that supports rapid, accessible web application development.
+
+## Comparison: Chakra UI vs DaisyUI
+
+DaisyUI is a plugin for Tailwind CSS that provides pre-styled components using Tailwind utility classes. Here's how it compares:
+
+| Feature | Chakra UI | daisyUI |
+|---------|-----------|---------|
+| Framework | React component library | Tailwind CSS plugin |
+| Styling | Utility-based with props | Tailwind-based classes |
+| Accessibility | Strong focus, built-in support | Varies by component, developer-managed |
+| Theming | Built-in theme support | Themes via Tailwind configuration |
+| Customization | Prop-driven, highly configurable | Requires class overrides or config |
+| Setup | React-based, works in JS/TS projects | Works anywhere Tailwind is used |
+
+## Conclusion
+
+DaisyUI has the advantage of allowing developers to quickly apply styling that remains consistent across the application. Since it builds on Tailwind CSS, it also benefits from being relatively unopinionated, giving you flexibility in how you structure your UI.
+
+Chakra UI, on the other hand, is a full-featured React component library. One of the main reasons I chose to present Chakra UI is its strong focus on accessibility. As a developer in Norway, where websites are legally required to meet accessibility standards, having a library that prioritizes WCAG compliance is incredibly valuable. Chakra's components are built following best practices for accessibility, which gives me confidence that I'm delivering inclusive experiences to all users.
+
+I didn't set up any of the alternatives to Chakra, so I can't speak directly to their setup processes, but I found getting started with Chakra to be relatively straightforward and well-documented.
 
 ---
 
-this tutorial will show you how fast and simple you can use chackra UI, this will just be a fresh repo with react. 
+This tutorial will show you how fast and simple you can use Chakra UI, this will just be a fresh repo with React. 
 
-## project structure
+## Project structure
 
-here's how your project should be organized when we have followed the steps:
+Here's how your project should be organized when we have followed the steps:
 
 <details>
 <summary><strong>Project Structure</strong> (click to expand)</summary>
@@ -75,28 +108,28 @@ your-project/
 
 </details>
 
-assuming you just have a code editor we will start with node to install everything 
+Assuming you just have a code editor we will start with node to install everything 
 ```bash
 npm install
 ```
 
-when we have npm installed we can start building!
+When we have npm installed we can start building!
 
-### first initialize a new project
+### First initialize a new project
 ```bash
 npm init -y
 ```
-### second install react core dependencies
+### Second install React core dependencies
 ```bash
 npm install react react-dom
 ```
-### third install chakra ui and ist required dependencies
+### Third install Chakra UI and its required dependencies
 ```bash
 npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
 ```
 
-then you create a basic file structure src folder
-inn root create index.html and add this very basic file structure and add this tp the html file
+Then you create a basic file structure src folder
+In root create index.html and add this very basic file structure and add this to the html file
 
 <details>
 <summary><strong>index.html</strong> (click to expand)</summary>
@@ -121,7 +154,7 @@ inn root create index.html and add this very basic file structure and add this t
 
 </details>
 
-src folder create index.jsx and add this to the jsx file 
+Src folder create index.jsx and add this to the jsx file 
 
 <details>
 <summary><strong>index.jsx</strong> (click to expand)</summary>
@@ -143,9 +176,9 @@ root.render(
 </details>
 
 
-instead of going codeblock for codeblock ive generated a very simple demonstration of all the UI components inside each of the elements there is a explenation that shows or explains the element or why things like these are easy to build with chackra, I will be importing and showing a lot to give you a good scope of what cackra can do there will also be small comments in the code pretaing to the function they serve. 
+Instead of going codeblock for codeblock I've generated a very simple demonstration of all the UI components inside each of the elements there is an explanation that shows or explains the element or why things like these are easy to build with Chakra, I will be importing and showing a lot to give you a good scope of what Chakra can do there will also be small comments in the code pertaining to the function they serve. 
 
-create inside src/ App.jsx 
+Create inside src/ App.jsx 
 
 <details>
 <summary><strong>App.jsx</strong> (click to expand)</summary>
