@@ -171,15 +171,120 @@ function HowTo() {
             </Alert>
           </Box>
 
+          {/* History */}
+          <Box>
+            <Heading size="lg" mb={4}>History</Heading>
+            <Text>
+              Chakra UI was created in 2019 by Segun Adebayo, a Nigerian software engineer, with the goal of building a simple and accessible component library for React. 
+              The project gained rapid adoption due to its focus on developer experience and accessibility-first approach. Since its initial release, Chakra UI has evolved 
+              through major versions, with version 2.0 introducing significant improvements to theming, performance, and TypeScript support. The library has grown from a 
+              personal project to a widely-adopted solution used by thousands of developers worldwide.
+            </Text>
+          </Box>
+
+          {/* Limitations */}
+          <Box>
+            <Heading size="lg" mb={4}>Limitations</Heading>
+            <Text>
+              While Chakra UI excels in many areas, it does have some limitations. The library can add significant bundle size to smaller projects, and some developers 
+              find the utility-prop approach verbose compared to traditional CSS. Customization beyond the provided theme system can sometimes require more effort, 
+              and the opinionated design system may not suit all brand requirements. Additionally, being React-specific limits its use in other frameworks, 
+              and some advanced UI patterns may require custom implementations or third-party additions.
+            </Text>
+          </Box>
+
+          {/* Ecosystem Integration */}
+          <Box>
+            <Heading size="lg" mb={4}>Ecosystem integration</Heading>
+            <Text>
+              Chakra UI integrates seamlessly with modern full-stack development workflows. It works excellently with cloud platforms like Vercel, Netlify, 
+              and AWS Amplify for deployment, and pairs well with backend-as-a-service solutions like Supabase, Firebase, and PlanetScale. The library's TypeScript 
+              support makes it ideal for teams using modern development tools, and its consistent API helps streamline collaboration between designers and developers. 
+              When combined with state management solutions like Zustand or data-fetching libraries like SWR, Chakra UI becomes part of a comprehensive development 
+              platform that supports rapid, accessible web application development.
+            </Text>
+          </Box>
+
+          {/* Comparison Table */}
+          <Box>
+            <Heading size="lg" mb={4}>Comparison: Chakra UI vs DaisyUI</Heading>
+            <Text mb={4}>
+              DaisyUI is a plugin for Tailwind CSS that provides pre-styled components using Tailwind utility classes. Here's how it compares:
+            </Text>
+            <Box overflowX="auto">
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr style={{ borderBottom: '2px solid', borderColor: useColorModeValue('gray.300', 'gray.600') }}>
+                    <th style={{ textAlign: 'left', padding: '12px', fontWeight: 'bold' }}>Feature</th>
+                    <th style={{ textAlign: 'left', padding: '12px', fontWeight: 'bold' }}>Chakra UI</th>
+                    <th style={{ textAlign: 'left', padding: '12px', fontWeight: 'bold' }}>daisyUI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Framework</td>
+                    <td style={{ padding: '12px' }}>React component library</td>
+                    <td style={{ padding: '12px' }}>Tailwind CSS plugin</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Styling</td>
+                    <td style={{ padding: '12px' }}>Utility-based with props</td>
+                    <td style={{ padding: '12px' }}>Tailwind-based classes</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Accessibility</td>
+                    <td style={{ padding: '12px' }}>Strong focus, built-in support</td>
+                    <td style={{ padding: '12px' }}>Varies by component, developer-managed</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Theming</td>
+                    <td style={{ padding: '12px' }}>Built-in theme support</td>
+                    <td style={{ padding: '12px' }}>Themes via Tailwind configuration</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Customization</td>
+                    <td style={{ padding: '12px' }}>Prop-driven, highly configurable</td>
+                    <td style={{ padding: '12px' }}>Requires class overrides or config</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Setup</td>
+                    <td style={{ padding: '12px' }}>React-based, works in JS/TS projects</td>
+                    <td style={{ padding: '12px' }}>Works anywhere Tailwind is used</td>
+                  </tr>
+                </tbody>
+              </table>
+            </Box>
+          </Box>
+
+          {/* Conclusion */}
+          <Box>
+            <Heading size="lg" mb={4}>Conclusion</Heading>
+            <VStack spacing={4} align="stretch">
+              <Text>
+                DaisyUI has the advantage of allowing developers to quickly apply styling that remains consistent across the application. 
+                Since it builds on Tailwind CSS, it also benefits from being relatively unopinionated, giving you flexibility in how you structure your UI.
+              </Text>
+              <Text>
+                Chakra UI, on the other hand, is a full-featured React component library. One of the main reasons I chose to present Chakra UI 
+                is its strong focus on accessibility. As a developer in Norway, where websites are legally required to meet accessibility standards, 
+                having a library that prioritizes WCAG compliance is incredibly valuable. Chakra's components are built following best practices 
+                for accessibility, which gives me confidence that I'm delivering inclusive experiences to all users.
+              </Text>
+              <Text>
+                I didn't set up any of the alternatives to Chakra, so I can't speak directly to their setup processes, but I found getting 
+                started with Chakra to be relatively straightforward and well-documented.
+              </Text>
+            </VStack>
+          </Box>
+
           <Divider />
 
           {/* Tutorial Section */}
           <Text fontSize="lg">
             This tutorial will show you how fast and simple you can use Chakra UI, 
-            this will just be a fresh repo with React.
+            This will just be a fresh repo with React.
           </Text>
 
-          {/* Project Structure */}
           <Box>
             <Heading size="lg" mb={4}>Project Structure</Heading>
             <Text mb={4}>Here's how your project should be organized when we have followed the steps:</Text>
@@ -221,14 +326,14 @@ function HowTo() {
               </Box>
 
               <Box>
-                <Heading size="md">Second install react core dependencies</Heading>
+                <Heading size="md">Second install React core dependencies</Heading>
                 <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
                   npm install react react-dom
                 </Code>
               </Box>
 
               <Box>
-                <Heading size="md">Third install chakra ui and its required dependencies</Heading>
+                <Heading size="md">Third install Chakra UI and its required dependencies</Heading>
                 <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
                   npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
                 </Code>
