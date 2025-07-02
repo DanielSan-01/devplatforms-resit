@@ -70,52 +70,53 @@ function HowTo() {
           </Heading>
           
           <Text fontSize="lg">
-            Hello! This markup doc will tell you about Chakra UI and the key features and capabilities. 
-            It will also be a tutorial on how to get started.
+            So you want to learn Chakra UI? Cool! I'll walk you through what it is, why I like it, 
+            and how to actually get it working. Let's dive in.
           </Text>
 
           {/* What is Chakra UI */}
           <Box>
             <Heading size="lg" mb={4}>What is Chakra UI?</Heading>
             <Text mb={4}>
-              Chakra UI is a modern, open-source component library built for React applications. 
-              It provides developers with a set of accessible and themeable components out of the box, 
-              enabling faster and more consistent UI development.
+              Chakra UI is basically a bunch of pre-made React components that look good and work well. 
+              Instead of building buttons, forms, and modals from scratch every time, you just import them 
+              and customize them however you want.
             </Text>
             <Text>
-              Chakra emphasizes developer experience, accessibility, and customizability. 
-              All components are built with WAI-ARIA standards, meaning accessibility is baked in by default.
+              The thing that really sets it apart is the accessibility stuff - everything works with 
+              screen readers and keyboards by default. As someone working in Norway where accessibility 
+              compliance is legally required, this is honestly a huge relief.
             </Text>
           </Box>
 
           {/* Key Features */}
           <Box>
-            <Heading size="lg" mb={4}>KEY FEATURES</Heading>
+            <Heading size="lg" mb={4}>The stuff that actually matters</Heading>
             <VStack spacing={4} align="stretch">
               
               <Box>
-                <Heading size="md" fontWeight="bold">Pre-built components</Heading>
-                <Text>Includes everything from buttons, modals and forms - providing you with a comprehensive toolkit right out of the box.</Text>
+                <Heading size="md" fontWeight="bold">Components that just work</Heading>
+                <Text>Buttons, modals, forms, navigation - basically everything you need without having to build it yourself. I used to spend hours making dropdown menus that worked properly... not anymore.</Text>
               </Box>
 
               <Box>
-                <Heading size="md" fontWeight="bold">Theming system</Heading>
-                <Text>Powerful theming engine to customize colours, fonts, breakpoints and more to match your brand/style system.</Text>
+                <Heading size="md" fontWeight="bold">Easy theming</Heading>
+                <Text>You can change colors, fonts, spacing, etc. without diving into CSS hell. Though honestly, their defaults look pretty good so I don't always bother.</Text>
               </Box>
 
               <Box>
-                <Heading size="md" fontWeight="bold">Style props</Heading>
-                <Text>You can style these components directly. With this inline styling removes need for CSS files.</Text>
+                <Heading size="md" fontWeight="bold">Style with props</Heading>
+                <Text>This felt weird at first, but now I love it. You style components right where you use them: `bg="red.500"` instead of hunting through CSS files.</Text>
               </Box>
 
               <Box>
-                <Heading size="md" fontWeight="bold">Built-in responsiveness</Heading>
-                <Text>Also easy to change different styles for different breakpoints across all devices.</Text>
+                <Heading size="md" fontWeight="bold">Mobile-friendly by default</Heading>
+                <Text>Responsive design without the headache. You can set different styles for different screen sizes pretty easily.</Text>
               </Box>
 
               <Box>
-                <Heading size="md" fontWeight="bold">Accessibility</Heading>
-                <Text>Best practices and proper ARIA attributes built into every component by default.</Text>
+                <Heading size="md" fontWeight="bold">Accessibility that works</Heading>
+                <Text>Focus management, ARIA labels, keyboard navigation - it's all handled automatically. This alone saves me so much time.</Text>
               </Box>
             </VStack>
           </Box>
@@ -319,21 +320,21 @@ function HowTo() {
 
             <VStack spacing={4} align="stretch">
               <Box>
-                <Heading size="md">First initialize a new project</Heading>
+                <Heading size="md">Set up your project</Heading>
                 <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
                   npm init -y
                 </Code>
               </Box>
 
               <Box>
-                <Heading size="md">Second install React core dependencies</Heading>
+                <Heading size="md">Install React</Heading>
                 <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
                   npm install react react-dom
                 </Code>
               </Box>
 
               <Box>
-                <Heading size="md">Third install Chakra UI and its required dependencies</Heading>
+                <Heading size="md">Add Chakra UI</Heading>
                 <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
                   npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
                 </Code>
