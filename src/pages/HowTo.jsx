@@ -1,0 +1,596 @@
+import React from 'react';
+import {
+  Box,
+  Container,
+  Heading,
+  Text,
+  VStack,
+  HStack,
+  Collapse,
+  useDisclosure,
+  Button,
+  Code,
+  useColorModeValue,
+  Divider,
+  UnorderedList,
+  ListItem,
+  Alert,
+  AlertIcon,
+} from '@chakra-ui/react';
+import { ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons';
+
+// Collapsible Code Block Component
+const CollapsibleCodeBlock = ({ title, language, children, defaultOpen = false }) => {
+  const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: defaultOpen });
+  
+  return (
+    <Box mb={4}>
+      <Button
+        onClick={onToggle}
+        variant="ghost"
+        leftIcon={isOpen ? <ChevronDownIcon /> : <ChevronRightIcon />}
+        fontWeight="bold"
+        size="sm"
+        mb={2}
+      >
+        {title}
+      </Button>
+      <Collapse in={isOpen} animateOpacity>
+        <Box
+          as="pre"
+          bg={useColorModeValue('gray.100', 'gray.800')}
+          p={4}
+          borderRadius="md"
+          overflow="auto"
+          fontSize="sm"
+          border="1px solid"
+          borderColor={useColorModeValue('gray.200', 'gray.600')}
+        >
+          <Code colorScheme="gray" fontSize="sm" whiteSpace="pre-wrap">
+            {children}
+          </Code>
+        </Box>
+      </Collapse>
+    </Box>
+  );
+};
+
+function HowTo() {
+  const bgColor = useColorModeValue('gray.50', 'gray.900');
+  const cardBg = useColorModeValue('white', 'gray.800');
+
+  return (
+    <Box bg={bgColor} minH="100vh" py={8}>
+      <Container maxW="container.xl">
+        <VStack spacing={8} align="stretch">
+          
+          {/* Header */}
+          <Heading size="xl" bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
+            Chakra UI Tutorial & Guide
+          </Heading>
+          
+          <Text fontSize="lg">
+            Hello! This markup doc will tell you about Chakra UI and the key features and capabilities. It will also be a tutorial on how to get started.
+          </Text>
+
+          {/* What is Chakra UI */}
+          <Box>
+            <Heading size="lg" mb={4}>What is Chakra UI?</Heading>
+            <Text mb={4}>
+              Chakra UI is a modern, open-source component library built for React applications. It provides developers with a set of accessible and themeable components out of the box, enabling faster and more consistent UI development.
+            </Text>
+            <Text>
+              Chakra emphasizes developer experience, accessibility, and customizability. All components are built with WAI-ARIA standards, meaning accessibility is baked in by default.
+            </Text>
+          </Box>
+
+          {/* Key Features */}
+          <Box>
+            <Heading size="lg" mb={4}>KEY FEATURES</Heading>
+            <VStack spacing={4} align="stretch">
+              
+              <Box>
+                <Heading size="md" fontWeight="bold">Pre-built components</Heading>
+                <Text>Includes everything from buttons, modals and forms - providing you with a comprehensive toolkit right out of the box.</Text>
+              </Box>
+
+              <Box>
+                <Heading size="md" fontWeight="bold">Theming system</Heading>
+                <Text>Powerful theming engine to customize colours, fonts, breakpoints and more to match your brand/style system.</Text>
+              </Box>
+
+              <Box>
+                <Heading size="md" fontWeight="bold">Style props</Heading>
+                <Text>You can style these components directly. With this inline styling removes need for CSS files.</Text>
+              </Box>
+
+              <Box>
+                <Heading size="md" fontWeight="bold">Built-in responsiveness</Heading>
+                <Text>Also easy to change different styles for different breakpoints across all devices.</Text>
+              </Box>
+
+              <Box>
+                <Heading size="md" fontWeight="bold">Accessibility</Heading>
+                <Text>Best practices and proper ARIA attributes built into every component by default.</Text>
+              </Box>
+            </VStack>
+          </Box>
+
+          {/* How does this help developers */}
+          <Box>
+            <Heading size="lg" mb={4}>How does this help you as a developer?</Heading>
+            
+            <VStack spacing={4} align="stretch">
+              <Box>
+                <Heading size="md" mb={2}>Accessibility by default</Heading>
+                <Text>
+                  Many component libraries ignore accessibility, leaving it to the developer. 
+                  Chakra UI takes care of accessibility features like focus trapping, keyboard support, and ARIA roles. 
+                  This saves time and improves usability.
+                </Text>
+              </Box>
+
+              <Box>
+                <Heading size="md" mb={2}>Speeds up development</Heading>
+                <Text mb={2}>
+                  Developers don't have to reinvent UI elements from scratch. 
+                  With components like <Code>{'<Button>'}</Code>, <Code>{'<Input>'}</Code>, <Code>{'<Modal>'}</Code>, and <Code>{'<Flex>'}</Code>, 
+                  you can build entire interfaces with minimal setup.
+                </Text>
+                <Text fontWeight="bold">Example:</Text>
+                <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
+                  {'<Button colorScheme="blue">Click Me</Button>'}
+                </Code>
+              </Box>
+
+              <Box>
+                <Heading size="md" mb={2}>Reduce boilerplate code</Heading>
+                <Text>
+                  Instead of writing CSS classes or opening a separate CSS file, you apply styles directly via props. 
+                  This keeps the code cleaner and easier to manage.
+                </Text>
+              </Box>
+
+              <Box>
+                <Heading size="md" mb={2}>Encourages consistency</Heading>
+                <Text>
+                  Using a shared theme and reusable components leads to a consistent UI without much effort — 
+                  important when working in teams or across multiple pages.
+                </Text>
+              </Box>
+            </VStack>
+
+            <Alert status="info" mt={4}>
+              <AlertIcon />
+              Chakra UI is an excellent choice for developers who want to build clean, accessible, 
+              and responsive user interfaces fast — without compromising on customizability.
+            </Alert>
+          </Box>
+
+          {/* History */}
+          <Box>
+            <Heading size="lg" mb={4}>History</Heading>
+            <Text>
+              Chakra UI was created in 2019 by Segun Adebayo, a Nigerian software engineer, with the goal of building a simple and accessible component library for React. 
+              The project gained rapid adoption due to its focus on developer experience and accessibility-first approach. Since its initial release, Chakra UI has evolved 
+              through major versions, with version 2.0 introducing significant improvements to theming, performance, and TypeScript support. The library has grown from a 
+              personal project to a widely-adopted solution used by thousands of developers worldwide.
+            </Text>
+          </Box>
+
+          {/* Limitations */}
+          <Box>
+            <Heading size="lg" mb={4}>Limitations</Heading>
+            <Text>
+              While Chakra UI excels in many areas, it does have some limitations. The library can add significant bundle size to smaller projects, and some developers 
+              find the utility-prop approach verbose compared to traditional CSS. Customization beyond the provided theme system can sometimes require more effort, 
+              and the opinionated design system may not suit all brand requirements. Additionally, being React-specific limits its use in other frameworks, 
+              and some advanced UI patterns may require custom implementations or third-party additions.
+            </Text>
+          </Box>
+
+          {/* Ecosystem Integration */}
+          <Box>
+            <Heading size="lg" mb={4}>Ecosystem integration</Heading>
+            <Text>
+              Chakra UI integrates seamlessly with modern full-stack development workflows. It works excellently with cloud platforms like Vercel, Netlify, 
+              and AWS Amplify for deployment, and pairs well with backend-as-a-service solutions like Supabase, Firebase, and PlanetScale. The library's TypeScript 
+              support makes it ideal for teams using modern development tools, and its consistent API helps streamline collaboration between designers and developers. 
+              When combined with state management solutions like Zustand or data-fetching libraries like SWR, Chakra UI becomes part of a comprehensive development 
+              platform that supports rapid, accessible web application development.
+            </Text>
+          </Box>
+
+          {/* Comparison Table */}
+          <Box>
+            <Heading size="lg" mb={4}>Comparison: Chakra UI vs DaisyUI</Heading>
+            <Text mb={4}>
+              DaisyUI is a plugin for Tailwind CSS that provides pre-styled components using Tailwind utility classes. Here's how it compares:
+            </Text>
+            <Box overflowX="auto">
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr style={{ borderBottom: '2px solid', borderColor: useColorModeValue('gray.300', 'gray.600') }}>
+                    <th style={{ textAlign: 'left', padding: '12px', fontWeight: 'bold' }}>Feature</th>
+                    <th style={{ textAlign: 'left', padding: '12px', fontWeight: 'bold' }}>Chakra UI</th>
+                    <th style={{ textAlign: 'left', padding: '12px', fontWeight: 'bold' }}>daisyUI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Framework</td>
+                    <td style={{ padding: '12px' }}>React component library</td>
+                    <td style={{ padding: '12px' }}>Tailwind CSS plugin</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Styling</td>
+                    <td style={{ padding: '12px' }}>Utility-based with props</td>
+                    <td style={{ padding: '12px' }}>Tailwind-based classes</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Accessibility</td>
+                    <td style={{ padding: '12px' }}>Strong focus, built-in support</td>
+                    <td style={{ padding: '12px' }}>Varies by component, developer-managed</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Theming</td>
+                    <td style={{ padding: '12px' }}>Built-in theme support</td>
+                    <td style={{ padding: '12px' }}>Themes via Tailwind configuration</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid', borderColor: useColorModeValue('gray.200', 'gray.700') }}>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Customization</td>
+                    <td style={{ padding: '12px' }}>Prop-driven, highly configurable</td>
+                    <td style={{ padding: '12px' }}>Requires class overrides or config</td>
+                  </tr>
+                  <tr>
+                    <td style={{ padding: '12px', fontWeight: 'semibold' }}>Setup</td>
+                    <td style={{ padding: '12px' }}>React-based, works in JS/TS projects</td>
+                    <td style={{ padding: '12px' }}>Works anywhere Tailwind is used</td>
+                  </tr>
+                </tbody>
+              </table>
+            </Box>
+          </Box>
+
+          {/* Conclusion */}
+          <Box>
+            <Heading size="lg" mb={4}>My take on all this</Heading>
+            <VStack spacing={4} align="stretch">
+              <Text>
+                Look, DaisyUI is cool if you're already using Tailwind and want some pre-made components. It's pretty flexible and doesn't force you into any particular way of doing things.
+              </Text>
+              <Text>
+                But I keep coming back to Chakra because of the accessibility stuff. Working in Norway means I actually have to care about WCAG compliance (it's legally required here), and Chakra just handles so much of that automatically. It gives me confidence that I'm not accidentally making my sites unusable for people with disabilities.
+              </Text>
+              <Text>
+                I haven't tried setting up all the alternatives, but Chakra's docs are pretty good and I got it working without too much hassle. Plus, once you learn their component patterns, you can build interfaces really quickly.
+              </Text>
+            </VStack>
+          </Box>
+
+          <Divider />
+
+          {/* Tutorial Section */}
+          <Heading size="xl" bgGradient="linear(to-l, #7928CA, #FF0080)" bgClip="text">
+            Alright, let's actually build something
+          </Heading>
+          
+          <Text fontSize="lg">
+            Want to see how this works in practice? I'll walk you through setting up a basic React project with Chakra UI. Nothing fancy - just enough to get you started and see what all the fuss is about.
+          </Text>
+
+          <Box>
+            <Heading size="lg" mb={4}>How your project will look</Heading>
+            <Text mb={4}>After we're done, you'll have something like this:</Text>
+            
+            <CollapsibleCodeBlock title="Project Structure" language="text">
+{`your-project/
+├── index.html
+├── package.json
+├── vite.config.js
+└── src/
+    ├── index.jsx
+    ├── App.jsx
+    ├── pages/
+    │   └── HowTo.jsx
+    └── components/
+        └── ui/
+            ├── color-mode.jsx
+            ├── provider.jsx
+            ├── toaster.jsx
+            └── tooltip.jsx`}
+            </CollapsibleCodeBlock>
+          </Box>
+
+          {/* Installation Steps */}
+          <Box>
+            <Text mb={4}>Okay, assuming you've got Node.js installed (if not, go grab it first), let's get this party started.</Text>
+            
+            <Text mb={4}>First, make a new folder for your project and jump into it:</Text>
+            <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')} mb={4}>
+              npm init -y
+            </Code>
+
+            <VStack spacing={4} align="stretch">
+              <Box>
+                <Text fontWeight="bold">Obviously we need React:</Text>
+                <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
+                  npm install react react-dom
+                </Code>
+              </Box>
+
+              <Box>
+                <Text fontWeight="bold">And then all the Chakra stuff:</Text>
+                <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
+                  npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
+                </Code>
+                <Text fontSize="sm" color="gray.500" mt={1}>
+                  Yeah, that's a bunch of dependencies. Emotion is what Chakra uses for styling, and Framer Motion handles animations. You need all of them, unfortunately.
+                </Text>
+              </Box>
+            </VStack>
+          </Box>
+
+          {/* File Creation Section */}
+          <Box>
+            <Text mb={4}>
+              Now let's create the basic files. In your project root, create an `index.html` file:
+            </Text>
+
+            <CollapsibleCodeBlock title="index.html" language="html">
+{`<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Chakra UI Demo - React Tutorial" />
+    <title>Chakra UI Demo</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>`}
+            </CollapsibleCodeBlock>
+
+            <Text mb={4}>Now create a `src` folder and inside it, make an `index.jsx` file:</Text>
+
+            <CollapsibleCodeBlock title="index.jsx" language="jsx">
+{`import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ChakraProvider } from '@chakra-ui/react';
+import App from './App.jsx';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <ChakraProvider>
+    <App />
+  </ChakraProvider>
+);`}
+            </CollapsibleCodeBlock>
+          </Box>
+
+          {/* Component Files Section */}
+          <Box>
+            <Text mb={4}>
+              For the main app, I've put together a demo that shows off a bunch of Chakra components. It's not the prettiest thing in the world, but it'll give you a good feel for how everything works together.
+            </Text>
+
+            <Text mb={4}>Create `App.jsx` in your `src` folder:</Text>
+
+            <CollapsibleCodeBlock title="App.jsx" language="jsx">
+{`import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link as RouterLink, useLocation } from 'react-router-dom';
+import {
+  Box, Button, Card, CardBody, CardHeader, Container, Flex, Grid, GridItem, Heading, HStack, VStack, Text, Badge,
+  Avatar, AvatarBadge, Switch, useColorMode, useColorModeValue, IconButton, Input, InputGroup, InputLeftElement,
+  Alert, AlertIcon, AlertTitle, Progress, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, Modal, ModalOverlay,
+  ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure, Tooltip, SimpleGrid, Image, Stack, useToast
+} from '@chakra-ui/react';
+import { MoonIcon, SunIcon, SearchIcon, StarIcon } from '@chakra-ui/icons';
+
+function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [progress, setProgress] = useState(45);
+  const toast = useToast();
+
+  // Color mode values - automatically switches between light/dark
+  const bgColor = useColorModeValue('gray.50', 'gray.900');
+  const cardBg = useColorModeValue('white', 'gray.800');
+
+  const showToast = () => {
+    toast({
+      title: "Account created!",
+      description: "We've created your account for you.",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
+  };
+
+  return (
+    <Box bg={bgColor} minH="100vh" py={8}>
+      <Container maxW="container.xl">
+        {/* Your amazing Chakra UI components here */}
+      </Container>
+    </Box>
+  );
+}
+
+export default App;`}
+            </CollapsibleCodeBlock>
+          </Box>
+
+          {/* UI Component Files */}
+          <Box>
+            <Text mb={4}>Then we need a new folder src/components/ui here we need 4 files:</Text>
+            <UnorderedList mb={4}>
+              <ListItem>color-mode.jsx</ListItem>
+              <ListItem>provider.jsx</ListItem>
+              <ListItem>toaster.jsx</ListItem>
+              <ListItem>tooltip.jsx</ListItem>
+            </UnorderedList>
+
+            <CollapsibleCodeBlock title="color-mode.jsx" language="jsx">
+{`'use client'
+
+import { ClientOnly, IconButton, Skeleton, Span } from '@chakra-ui/react'
+import { ThemeProvider, useTheme } from 'next-themes'
+import * as React from 'react'
+import { LuMoon, LuSun } from 'react-icons/lu'
+
+export function ColorModeProvider(props) {
+  return (
+    <ThemeProvider attribute='class' disableTransitionOnChange {...props} />
+  )
+}
+
+export function useColorMode() {
+  const { resolvedTheme, setTheme, forcedTheme } = useTheme()
+  const colorMode = forcedTheme || resolvedTheme
+  const toggleColorMode = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }
+  return {
+    colorMode: colorMode,
+    setColorMode: setTheme,
+    toggleColorMode,
+  }
+}
+
+// ... rest of color mode utilities`}
+            </CollapsibleCodeBlock>
+
+            <CollapsibleCodeBlock title="provider.jsx" language="jsx">
+{`'use client'
+
+import { ChakraProvider, defaultSystem } from '@chakra-ui/react'
+import { ColorModeProvider } from './color-mode'
+
+export function Provider(props) {
+  return (
+    <ChakraProvider value={defaultSystem}>
+      <ColorModeProvider {...props} />
+    </ChakraProvider>
+  )
+}`}
+            </CollapsibleCodeBlock>
+
+            <CollapsibleCodeBlock title="toaster.jsx" language="jsx">
+{`'use client'
+
+import {
+  Toaster as ChakraToaster,
+  Portal,
+  Spinner,
+  Stack,
+  Toast,
+  createToaster,
+} from '@chakra-ui/react'
+
+export const toaster = createToaster({
+  placement: 'bottom-end',
+  pauseOnPageIdle: true,
+})
+
+export const Toaster = () => {
+  return (
+    <Portal>
+      <ChakraToaster toaster={toaster} insetInline={{ mdDown: '4' }}>
+        {(toast) => (
+          <Toast.Root width={{ md: 'sm' }}>
+            {/* Toast content */}
+          </Toast.Root>
+        )}
+      </ChakraToaster>
+    </Portal>
+  )
+}`}
+            </CollapsibleCodeBlock>
+
+            <CollapsibleCodeBlock title="tooltip.jsx" language="jsx">
+{`import { Tooltip as ChakraTooltip, Portal } from '@chakra-ui/react'
+import * as React from 'react'
+
+export const Tooltip = React.forwardRef(function Tooltip(props, ref) {
+  const {
+    showArrow,
+    children,
+    disabled,
+    portalled = true,
+    content,
+    contentProps,
+    portalRef,
+    ...rest
+  } = props
+
+  if (disabled) return children
+
+  return (
+    <ChakraTooltip.Root {...rest}>
+      <ChakraTooltip.Trigger asChild>{children}</ChakraTooltip.Trigger>
+      <Portal disabled={!portalled} container={portalRef}>
+        <ChakraTooltip.Positioner>
+          <ChakraTooltip.Content ref={ref} {...contentProps}>
+            {showArrow && (
+              <ChakraTooltip.Arrow>
+                <ChakraTooltip.ArrowTip />
+              </ChakraTooltip.Arrow>
+            )}
+            {content}
+          </ChakraTooltip.Content>
+        </ChakraTooltip.Positioner>
+      </Portal>
+    </ChakraTooltip.Root>
+  )
+})`}
+            </CollapsibleCodeBlock>
+          </Box>
+
+          {/* Build Tools Section */}
+          <Box>
+            <Text mb={4}>
+              With all the files ready to go we need a build tool like Parcel or Vite. 
+              I will use Vite in this tutorial.
+            </Text>
+
+            <Text mb={2}>To install Vite:</Text>
+            <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')} mb={4}>
+              npm install vite @vitejs/plugin-react --save-dev
+            </Code>
+
+            <CollapsibleCodeBlock title="package.json scripts" language="json">
+{`{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}`}
+            </CollapsibleCodeBlock>
+
+            <Text mb={2}>Then run dev server:</Text>
+            <Code p={2} display="block" bg={useColorModeValue('gray.100', 'gray.800')}>
+              npm run dev
+            </Code>
+          </Box>
+
+          {/* Success Message */}
+          <Alert status="success">
+            <AlertIcon />
+            <Box>
+              <Text fontWeight="bold">Congratulations!</Text>
+              <Text>You now have a fully functional Chakra UI React application ready for development!</Text>
+            </Box>
+          </Alert>
+
+        </VStack>
+      </Container>
+    </Box>
+  );
+}
+
+export default HowTo; 
