@@ -8,7 +8,7 @@ npm install react react-dom
 ```bash
 npx create-react-app modern-react-app-using-chakraui   
 ```
-Hey! So you want to learn about Chakra UI? Cool, I'll walk you through what it is and how to actually use it.
+this is my first project with charka and i have to say its going to be one of my goto tools for react. this markdown text is why thoughts and what ive learned about chakra. i will tell you about it and show you how to set it up in yor project
 
 What is Chakra UI?
 

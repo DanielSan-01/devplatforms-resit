@@ -1,4 +1,4 @@
-So... I've been working with Chakra UI for a while now, and honestly? It's become one of my go-to tools for React projects. This guide is basically me sharing what I've learned about it - the good stuff, some quirks I've run into, and how to actually get it working without pulling your hair out.
+this is my first project with charka and i have to say its going to be one of my goto tools for react. this markdown text is why thoughts and what ive learned about chakra. i will tell you about it and show you how to set it up in yor project
 
 ### What is Chakra UI? (And why I actually like it)
 

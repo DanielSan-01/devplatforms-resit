@@ -70,8 +70,7 @@ function HowTo() {
           </Heading>
           
           <Text fontSize="lg">
-            So you want to learn Chakra UI? Cool! I'll walk you through what it is, why I like it, 
-            and how to actually get it working. Let's dive in.
+            this is my first project with charka and i have to say its going to be one of my goto tools for react. this markdown text is why thoughts and what ive learned about chakra. i will tell you about it and show you how to set it up in yor project
           </Text>
 
           {/* What is Chakra UI */}
